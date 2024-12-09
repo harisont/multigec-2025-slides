@@ -1,92 +1,97 @@
 ---
-title: "The title"
-subtitle: "and a possibly very long subtitle"
-author: "The Author"
+title: "MultiGEC-2025"
+subtitle: "A Multilingual Grammatical Error Correction shared task"
+author: "Arianna Masciolini and Ricardo Muñoz Sánchez"
 theme: "lucid"
 logo: "gu.png"
-date: "the date"
-institute: "The Institution"
+date: "December, 16, 2024"
+institute: "Språkanken Text, University of Gothenburg"
 ---
 
-# The first section
+## What is GEC?
+_Sequence-to-sequence task_ where:
 
-## The first slide
-It just contains some __text__ in _various_ styles ~~in it~~.
+- __input__: an (ungrammatical) text, typically written by a learner
+- __output__: a normalized version of the same text, aka _correction hypothesis_, which can be
+  - _minimal_ or
+  - _fluency-edited_
 
-## The second slide
-A first, multiline paragraph with some random words and even a correctly placed footnote![^1]
+## Example
+\bigskip \bigskip
 
-And a second, shorter paragraph here.
-
-[^1]: This is the footnote.
-
-## Some nested bullet points
-- one
-- two
-  - one
-    - one
-    - two
-    - three
-  - two 
-  - three
-- three
-
-## And a nested numbered list
-1. one
-2. two
-   1. one
-      1. one
-      2. two
-      3. three
-   2. two
-   3. three
-3. three
-
-## Another text slide
-
-Where the text
-
-### Is followed by a colorful subheading
-
-And some more text that doesn't say anything particularly interesting.
-
-## A quote
-Introduced by some text, here are
-
-> Some words of wisdom
-
-And a closing comment.
-
-# The fancy section
-
-## An image
-![With a caption](sbx.png)
-
-## Some code
-
-A syntax-highlighted code example: 
-
-```haskell
-haskellExample :: From -> To
-haskellExample from = to
-```
-
-Plus some `inline monospaced text` just because we can.
-
-## A little bit of math mode
-Here is a pretty random formula:
-
-$\int_{a}^{b} f(x)dx = F(b) - F(a)$
-
-With equal spacing above and below, _obviously_.
-
-## And finally, a table
-
-As always, a very realistic example:
-
-| __col a__ | __col b__ | __col c__ |
+\footnotesize
+| __original__ | __normalized (minimal)__ | __normalized (fluency)__ |
 | --- | --- | --- |
-| a1 | b1 | c1 |
-| a2 | b2 | c2 |
+| My moter became very sad, no food. | My _mother_ became very sad, _and ate_ no food. | My _mother_ _was_ very _sad and refused to eat_. |
+| Min mama bliv väldigt ledsen, ingen mat. | Min _mamma_ _blev_ väldigt ledsen, _och åt ingen mat_. | Min _mamma_ _blev_ väldigt ledsen _och slutade äta_. |
+| Mia mama era tanto triste, mangiava niente. | Mia _mamma_ era tanto triste _e_ _non_ mangiava niente. | Mia _madre_ era _molto_ triste e _aveva smesso di mangiare_. |
+| Mi mama era tan triste, no comia. | Mi _mamá estaba muy_ triste, _no comía_.  | Mi _mamá estaba muy_ triste _y no comía nada_. 
 
-# That's all!
+## The shared task
+\bigskip
+![](task_web.png)
+
+## Why are we doing this?
+\bigskip \bigskip
+![](lang_representation.svg)
+
+## Why are we doing this?
+\bigskip \bigskip
+![](lang_participation.svg)
+
+## Why are we doing this?
+\bigskip \bigskip \bigskip
+![](matthew.png)
+
+## Why are we doing this?
+\bigskip \bigskip \bigskip
+![](robin_hood.png)
+
+## The shared task in numbers
+- 12 languages and 18 subcorpora
+- 8 organizers and 28 data providers
+- 2 tracks (minimal + fluency)
+- 3 evaluation metrics
+- 1 multilingual baseline
+
+## Dataset
+![](provisory_dataset.png)
+
+TODO: this is just a temporary placeholder, the table should (only?) contain info about learners and domains
+
+## Evaluation
+- 2 __reference-based__ metrics (better for minimal edits):
+  - $F_{0.5}$
+  - GLEU
+- Scribendi score (__referenceless__ and LM-based, better \newline for fluency edits)
+
+## Baseline
+\bigskip \bigskip 
+![](llama.png)
+
+## Participation
+\bigskip \bigskip
+![](sad_plot.svg)
+
+## Results (non-random sample)
+
+\bigskip 
+
+### Ukrainian (UA-GEC), "minimal edits" track
+
+\footnotesize
+| Rank | Team name | GLEU | P | R | __F0.5__ | Scribendi |
+| -- | ------ | ---- | --- | --- | --- | ----- |
+| __1__ | __UAM-CSI__ | __79.55__ | __74.31__ | __54.11__ | __69.15__ | __0.89__ |
+| 2 | Lattice | 74.0 | 58.55 | 34.28 | 51.29 | 0.1 |
+| 3 | baseline | 68.03 | 26.1 | 14.82 | 22.66 | 0.41 |
+| 4 | Grammaticks | 62.93 | 16.53 | 13.48 | 15.81 | -0.1 |
+| 5 | Rum-Cull | 65.38 | 3.15 | 1.18 | 2.36 | 0.62 |
+
+## Results (overview)
+TODO: Up for discussion how to best visually summarize them (we will need something like this in the paper as well), I have some ideas we can talk about one of these days but not sure they're any good.
+
+## What's next?
+- open phase of the shared task (ongoing)
+- presentation of the results at the NLP4CALL workshop
+- manual evaluation of system output
