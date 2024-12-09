@@ -5,7 +5,7 @@ author: "Arianna Masciolini and Ricardo Muñoz Sánchez"
 theme: "lucid"
 logo: "gu.png"
 date: "December, 16, 2024"
-institute: "Språkanken Text, University of Gothenburg"
+institute: "Språkbanken Text, University of Gothenburg"
 ---
 
 ## What is GEC?
