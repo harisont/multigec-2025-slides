@@ -74,9 +74,6 @@ TODO: this is just a temporary placeholder, the table should (only?) contain inf
 ![](sad_plot.svg)
 
 ## Results (non-random sample)
-
-\bigskip 
-
 ### Ukrainian (UA-GEC), "minimal edits" track
 
 \footnotesize
@@ -87,6 +84,8 @@ TODO: this is just a temporary placeholder, the table should (only?) contain inf
 | 3 | baseline | 68.03 | 26.1 | 14.82 | 22.66 | 0.41 |
 | 4 | Grammaticks | 62.93 | 16.53 | 13.48 | 15.81 | -0.1 |
 | 5 | Rum-Cull | 65.38 | 3.15 | 1.18 | 2.36 | 0.62 |
+
+For the complete results, see [`spraakbanken.gu.se/compsla/multigec-2025`](https://spraakbanken.gu.se/compsla/multigec-2025)
 
 ## Results (overview)
 TODO: Up for discussion how to best visually summarize them (we will need something like this in the paper as well), I have some ideas we can talk about one of these days but not sure they're any good.
