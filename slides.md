@@ -87,8 +87,13 @@ TODO: this is just a temporary placeholder, the table should (only?) contain inf
 
 For the complete results, see [`spraakbanken.gu.se/compsla/multigec-2025`](https://spraakbanken.gu.se/compsla/multigec-2025)
 
-## Results (overview)
-TODO: Up for discussion how to best visually summarize them (we will need something like this in the paper as well), I have some ideas we can talk about one of these days but not sure they're any good.
+## Overview ("minimal edits" track)
+\bigskip \bigskip
+![](plots_minimal_edits.svg)
+
+## Overview ("fluency edits" track)
+\bigskip \bigskip
+![](plots_fluency_edits.svg)
 
 ## What's next?
 - open phase of the shared task (ongoing)
