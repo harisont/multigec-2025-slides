@@ -54,7 +54,7 @@ Grammatical Error Correction is _sequence-to-sequence task_ where:
 
 \tiny
 | __lang__ | __subcorpus__       | __n. essays__ | __learners__                | __minimal__ | __fluency__ | __peculiarities__                                     |
-|--:|:----------------|-------------:|:---------------------|:--------|:--------|:--------------------------------------------------|
+|--:|:----------------|-------------:|:-----------------------------------|:--------|:--------|:----------------------------------------------|
 | cs   | NatWebInf |      6167 | __L1__ (web)               | \checkmark |            |                                                  |
 | cs   | Romani    |      3599 | __L1__ (Romani background) | \checkmark |            |                                                  |
 | cs   | SecLearn  |      2407 | __L2__                     | \checkmark |            |                                                  |
