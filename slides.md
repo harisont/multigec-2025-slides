@@ -9,7 +9,7 @@ institute: "Språkbanken Text, University of Gothenburg"
 ---
 
 ## What is GEC?
-_Sequence-to-sequence task_ where:
+Grammatical Error Correction is _sequence-to-sequence task_ where:
 
 - __input__: an (ungrammatical) text, typically written by a learner
 - __output__: a normalized version of the same text, aka _correction hypothesis_, which can be
