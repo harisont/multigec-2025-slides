@@ -24,28 +24,28 @@ Grammatical Error Correction is _sequence-to-sequence task_ where:
 | --- | --- | --- |
 | My moter became very sad, no food. | My _mother_ became very sad, _and ate_ no food. | My _mother_ _was_ very _sad and refused to eat_. |
 | Min mama bliv väldigt ledsen, ingen mat. | Min _mamma_ _blev_ väldigt ledsen, _och åt ingen mat_. | Min _mamma_ _blev_ väldigt ledsen _och slutade äta_. |
-| Mia mama era tanto triste, mangiava niente. | Mia _mamma_ era tanto triste _e_ _non_ mangiava niente. | Mia _madre_ era _molto_ triste e _aveva smesso di mangiare_. |
+| Mia mama era tanto triste, mangiava niente. | Mia _mamma_ era tanto triste _e_ _non_ mangiava niente. | Mia _madre_ era tanto triste _che aveva smesso di mangiare_. |
 | Mi mama era tan triste, no comia. | Mi _mamá estaba muy_ triste, _no comía_.  | Mi _mamá estaba muy_ triste _y no comía nada_. 
+
+## Why multilingual?
+\bigskip \bigskip \bigskip
+![](matthew.png)
+
+## Why multilingual?
+\bigskip \bigskip \bigskip
+![](robin_hood.png)
+
+## Why multilingual?
+\bigskip \bigskip
+![](lang_representation.svg)
+
+## Why multilingual?
+\bigskip \bigskip
+![](lang_participation.svg)
 
 ## The shared task
 \bigskip
 ![](task_web.png)
-
-## Why are we doing this?
-\bigskip \bigskip
-![](lang_representation.svg)
-
-## Why are we doing this?
-\bigskip \bigskip
-![](lang_participation.svg)
-
-## Why are we doing this?
-\bigskip \bigskip \bigskip
-![](matthew.png)
-
-## Why are we doing this?
-\bigskip \bigskip \bigskip
-![](robin_hood.png)
 
 ## Dataset
 \def\checkmark{\tikz\fill[scale=0.3](0,.35) -- (.25,0) -- (1,.7) -- (.25,.15) -- cycle;} 
@@ -54,7 +54,7 @@ Grammatical Error Correction is _sequence-to-sequence task_ where:
 
 \tiny
 | __lang__ | __subcorpus__       | __n. essays__ | __learners__                | __minimal__ | __fluency__ | __peculiarities__                                     |
-|:---|:----------------|-------------:|:---------------------|:--------|:--------|:--------------------------------------------------|
+|--:|:----------------|-------------:|:---------------------|:--------|:--------|:--------------------------------------------------|
 | cs   | NatWebInf |      6167 | __L1__ (web)               | \checkmark |            |                                                  |
 | cs   | Romani    |      3599 | __L1__ (Romani background) | \checkmark |            |                                                  |
 | cs   | SecLearn  |      2407 | __L2__                     | \checkmark |            |                                                  |
@@ -69,7 +69,7 @@ Grammatical Error Correction is _sequence-to-sequence task_ where:
 | it   | Merlin          |       813 | __L2__                     | \checkmark |            |                                                  |
 | lv   | LaVA            |      1015 | __L2__                     | \checkmark |            |                                                  |
 | ru   | RULEC-GEC       |      6043 | __mixed__ (L2 + heritage)  | \checkmark | \checkmark | pre-tokenized; text fragments; separate download |
-| sl   | Solar-Eval      |       109 | __L1__                     | \checkmark |            |                                                  |
+| sl   | Solar-Eval      |       109 | __L1__ (students) | \checkmark |            |                                                  |
 | sv   | SweLL_gold      |       502 | __L2__                     | \checkmark |            |                                                  |
 | uk   | UA-GEC          |      1872 | __mixed__ (crowdsourced)   | \checkmark | \checkmark |                                                  |
 
