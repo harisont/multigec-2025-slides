@@ -35,9 +35,12 @@ _Sequence-to-sequence task_ where:
 \bigskip \bigskip
 ![](lang_representation.svg)
 
+<!--TODO: use new ACL data; use 2-letter langcodes-->
+
 ## Why are we doing this?
 \bigskip \bigskip
 ![](lang_participation.svg)
+<!--TODO: use 2-letter langcodes-->
 
 ## Why are we doing this?
 \bigskip \bigskip \bigskip
@@ -87,6 +90,8 @@ _Sequence-to-sequence task_ where:
 \bigskip \bigskip
 ![](sad_plot.svg)
 
+<!--TODO: 34 should be 37; rm "number of people"; "were interested"-> "signed up for data access" or similar-->
+
 ## Results (non-random sample)
 ### Ukrainian (UA-GEC), "minimal edits" track
 
@@ -105,9 +110,13 @@ For the complete results, see [`spraakbanken.gu.se/compsla/multigec-2025`](https
 \bigskip \bigskip
 ![](plots_minimal_edits.svg)
 
+<!--TODO: use 2-letter langcodes; make baseline recognizable; move legend-->
+
 ## Overview ("fluency edits" track)
 \bigskip \bigskip
 ![](plots_fluency_edits.svg)
+
+<!--TODO: use 2-letter langcodes; make baseline recognizable; move legend; use same colors as in prev plot; reduce gap between codes and bars-->
 
 ## What's next?
 - open phase of the shared task (ongoing)
