@@ -47,17 +47,31 @@ _Sequence-to-sequence task_ where:
 \bigskip \bigskip \bigskip
 ![](robin_hood.png)
 
-## The shared task in numbers
-- 12 languages and 18 subcorpora
-- 8 organizers and 28 data providers
-- 2 tracks (minimal + fluency)
-- 3 evaluation metrics
-- 1 multilingual baseline
-
 ## Dataset
-![](provisory_dataset.png)
+\def\checkmark{\tikz\fill[scale=0.3](0,.35) -- (.25,0) -- (1,.7) -- (.25,.15) -- cycle;} 
 
-TODO: this is just a temporary placeholder, the table should (only?) contain info about learners and domains
+\bigskip \bigskip
+
+\tiny
+| __lang__ | __subcorpus__       | __n. essays__ | __learners__                | __minimal__ | __fluency__ | __peculiarities__                                     |
+|:---|:----------------|-------------:|:---------------------|:--------|:--------|:--------------------------------------------------|
+| cs   | NatWebInf |      6167 | __L1__ (web)               | \checkmark |            |                                                  |
+| cs   | Romani    |      3599 | __L1__ (Romani background) | \checkmark |            |                                                  |
+| cs   | SecLearn  |      2407 | __L2__                     | \checkmark |            |                                                  |
+| cs   | NatForm   |       391 | __L1__ (students)          | \checkmark |            |                                                  |
+| en   | Write & Improve |      5050 | __L2__                     | \checkmark |            | separate download                                |
+| et   | EIC             |       258 | __L2__                     | \checkmark | \checkmark |                                                  |
+| et   | EKIL2           |      1503 | __L2__                     |            | \checkmark |                                                  |
+| de   | Merlin          |      1033 | __L2__                     | \checkmark |            |                                                  |
+| el   | GLCII           |      1289 | __L2__                     | \checkmark |            |                                                  |
+| is   | IceEC           |       176 | __L1__                     |            | \checkmark | pre-tokenized                                    |
+| is   | IceL2EC         |       193 | __L2__                     |            | \checkmark | pre-tokenized; text fragments                    |
+| it   | Merlin          |       813 | __L2__                     | \checkmark |            |                                                  |
+| lv   | LaVA            |      1015 | __L2__                     | \checkmark |            |                                                  |
+| ru   | RULEC-GEC       |      6043 | __mixed__ (L2 + heritage)  | \checkmark | \checkmark | pre-tokenized; text fragments; separate download |
+| sl   | Solar-Eval      |       109 | __L1__                     | \checkmark |            |                                                  |
+| sv   | SweLL_gold      |       502 | __L2__                     | \checkmark |            |                                                  |
+| uk   | UA-GEC          |      1872 | __mixed__ (crowdsourced)   | \checkmark | \checkmark |                                                  |
 
 ## Evaluation
 - 2 __reference-based__ metrics (better for minimal edits):
