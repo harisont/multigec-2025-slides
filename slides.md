@@ -5,7 +5,7 @@ author: "Arianna Masciolini and Ricardo Muñoz Sánchez"
 theme: "lucid"
 logo: "gu.png"
 date: "December, 16, 2024"
-institute: "Språkbanken Text, University of Gothenburg"
+institute: "(and many, many more)"
 ---
 
 ## What is GEC?
@@ -113,3 +113,4 @@ For the complete results, see [`spraakbanken.gu.se/compsla/multigec-2025`](https
 - open phase of the shared task (ongoing)
 - presentation of the results at the NLP4CALL workshop
 - manual evaluation of system output
+- exploration of new ways to do automated evaluation
