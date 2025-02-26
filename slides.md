@@ -1,17 +1,29 @@
 ---
 title: "MultiGEC-2025"
-subtitle: "A Multilingual Grammatical Error Correction shared task"
-author: "Arianna Masciolini and Ricardo Muñoz Sánchez"
+subtitle: "A shared task in Multilingual Grammatical Error Correction"
+author: "A. Masciolini, A. Caines, O. De Clercq, J. Kruijsbergen, M. Kurfalı,"
 theme: "lucid"
 logo: "gu.png"
-date: "December, 16, 2024"
-institute: "(and many, many more)"
+date: "March 5, 2025"
+institute: "R. Muñoz Sánchez, E. Volodina, R. Östling and many, many others"
 ---
+
+## The shared task
+\bigskip
+![](task_web.png)
+
+## The shared task
+- Grammatical Error Correction (GEC)
+- multilingual (12 European languages)
+- text-level
+- two tracks:
+  1. "minimal edits"
+  2. "fluency edits"
 
 ## What is GEC?
 Grammatical Error Correction is _sequence-to-sequence task_ where:
 
-- __input__: an (ungrammatical) text, typically written by a learner
+- __input__: a text, potentially ungrammatical, typically written by a learner
 - __output__: a normalized version of the same text, aka _correction hypothesis_, which can be
   - _minimal_ or
   - _fluency-edited_
@@ -26,6 +38,8 @@ Grammatical Error Correction is _sequence-to-sequence task_ where:
 | Min mama bliv väldigt ledsen, ingen mat. | Min _mamma_ _blev_ väldigt ledsen, _och åt ingen mat_. | Min _mamma_ _blev_ väldigt ledsen _och slutade äta_. |
 | Mia mama era tanto triste, mangiava niente. | Mia _mamma_ era tanto triste _e_ _non_ mangiava niente. | Mia _madre_ era tanto triste _che aveva smesso di mangiare_. |
 | Mi mama era tan triste, no comia. | Mi _mamá estaba muy_ triste, _no comía_.  | Mi _mamá estaba muy_ triste _y no comía nada_. 
+
+(in the shared task, this is done at the level of full texts)
 
 ## Why multilingual?
 \bigskip \bigskip \bigskip
@@ -43,11 +57,7 @@ Grammatical Error Correction is _sequence-to-sequence task_ where:
 \bigskip \bigskip
 ![](lang_participation.svg)
 
-## The shared task
-\bigskip
-![](task_web.png)
-
-## Dataset
+## The MultiGEC dataset
 \def\checkmark{\tikz\fill[scale=0.3](0,.35) -- (.25,0) -- (1,.7) -- (.25,.15) -- cycle;} 
 
 \bigskip \bigskip
@@ -73,44 +83,80 @@ Grammatical Error Correction is _sequence-to-sequence task_ where:
 | sv   | SweLL_gold      |       502 | __L2__                     | \checkmark |            |                                                  |
 | uk   | UA-GEC          |      1872 | __mixed__ (crowdsourced)   | \checkmark | \checkmark |                                                  |
 
-## Evaluation
-- 2 __reference-based__ metrics (better for minimal edits):
-  - $F_{0.5}$
-  - GLEU
-- Scribendi score (__referenceless__ and LM-based, better \newline for fluency edits)
-
 ## Baseline
 \bigskip \bigskip 
 ![](llama.png)
 
-## Participation
+## Automatic evaluation
+
+\small
+
+| __metric__ | __characteristics__ | 
+| --- | ----- |
+| ERRANT-based $F_{0.5}$ score | reference-based; winning metric for __track 1__ |
+| GLEU score | rewards fluency, but still reference-based | 
+| Scribendi score | reference-free (LM[^1]-based); winning metric for __track 2__ | 
+
+\...all adapted to work on __full texts__ in all __12 languages__! 
+
+[^1]: Gemma 2
+
+## Results (track 1)
 \bigskip \bigskip
-![](registration_plot.svg)
+![](results_minimal_F05.svg)
 
-## Results (non-random sample)
-### Ukrainian (UA-GEC), "minimal edits" track
-
-\footnotesize
-| Rank | Team name | GLEU | P | R | __F0.5__ | Scribendi |
-| -- | ------ | ---- | --- | --- | --- | ----- |
-| __1__ | __UAM-CSI__ | __79.55__ | __74.31__ | __54.11__ | __69.15__ | __0.89__ |
-| 2 | Lattice | 74.0 | 58.55 | 34.28 | 51.29 | 0.1 |
-| 3 | baseline | 68.03 | 26.1 | 14.82 | 22.66 | 0.41 |
-| 4 | Grammaticks | 62.93 | 16.53 | 13.48 | 15.81 | -0.1 |
-| 5 | Rum-Cull | 65.38 | 3.15 | 1.18 | 2.36 | 0.62 |
-
-For the complete results, see [`spraakbanken.gu.se/compsla/multigec-2025`](https://spraakbanken.gu.se/compsla/multigec-2025)
-
-## Overview ("minimal edits" track)
+## Results (track 2)
 \bigskip \bigskip
-![](plots_minimal_edits.svg)
+![](results_fluency_Scribendi.svg)
 
-## Overview ("fluency edits" track)
+## GLEU scores (track 1)
 \bigskip \bigskip
-![](plots_fluency_edits.svg)
+![](results_minimal_GLEU.svg)
 
-## What's next?
-- open phase of the shared task (ongoing)
-- presentation of the results at the NLP4CALL workshop
-- manual evaluation of system output
-- exploration of new ways to do automated evaluation
+## GLEU scores (track 2)
+\bigskip \bigskip
+![](results_fluency_GLEU.svg)
+
+## Manual evaluation (preliminary)
+- 5 languages (English, German, Italian, Russian and Swedish)
+- manual inspection of all outputs for one challenging essay per language
+- confirms the ranking
+- further work needed to know the extent to which scores are cross-lingually comparable
+
+## Key takeaways
+- the overall winner is team UAM-CSI <!--across tracks, languages and evaluation metrics-->
+- in track 1, team Lattice ranks second for most languages
+- the baseline was harder to beat than expected
+- some languages (Icelandic & Russian) proved extra challenging for all models \pause
+- 4 submissions (vs ~50 requests for access to the dataset)
+
+## Reflections
+- __timeline__: to increase participation, the development phase should be longer, while the test phase can be shorter
+- __evaluation__: biggest challenge, need to consider tradeoff between advanced metrics and practicalities of the evaluation platform
+- __baseline__: using LLM-based systems as a baseline may discourage supervised system submissions 
+- __data access__: 
+  - different licenses hinder straightforward data releases of datasets derived from multiple sources
+  - unclear whether to release test sets or keep them private
+
+## The future
+- __dataset__:
+  - second release enhanced cross-subcorpus standardization
+  - extension of MultiGEC with additional references and/or new languages
+- __evaluation__:
+  - larger-scale manual assessment of the shared task results
+  - further work on automatic metrics
+- __open phase__ of the task (ongoing) -- more GEC systems for under-resource languages! 
+
+## To learn more about\...
+
+\bigskip\smallskip
+
+- \small __the state of GEC in the 12 MultiGEC languages prior to the shared task__: A. Masciolini, A. Caines, O. De Clercq, J. Kruijsbergen, M. Kurfalı, R. Muñoz Sánchez, E. Volodina, R. Östling, K. Allkivi, Š. Arhar Holdt, I. Auzina, R. Dargis, E. Drakonaki, J. Frey, I. Glišić, P. Kikilintza, L. Nicolas, M. Romanyshyn, A. Rosen, A. Rozovskaya, K. Suluste, O. Syvokon, A. Tantos, D. Touriki, K. Tsiotskas, E. Tsourilla, V. Varsamopoulos, K. Wisniewski, A. Žagar, and T. Zesch. _An overview of Grammatical Error Correction for the twelve MultiGEC-2025 languages_. Gothenburg, Sweden, 2025
+- \small __the shared task__: A. Masciolini, A. Caines, O. De Clercq, J. Kruijsbergen, M. Kurfalı, R. Muñoz Sánchez, E. Volodina, and R. Östling. _The MultiGEC-2025 shared task on Multilingual Grammatical Error Correction at NLP4CALL_. In R. Muñoz Sánchez, David Alfter, Jelena Kallas, and E. Volodina, editors, Proceedings of the 14th Workshop on Natural Language Processing for Computer Assisted Language Learning, Tallin, Estonia, 2025
+
+## To learn more about\...
+- \small __the MultiGEC dataset__: 
+  - \small __paper__: A. Masciolini, A. Caines, O. De Clercq, J. Kruijsbergen, M. Kurfalı, R. Muñoz Sánchez, E. Volodina, R. Östling, K. Allkivi, Š. Arhar Holdt, I. Auzina, R. Dargis, E. Drakonaki, J. Frey, I. Glišić, P. Kikilintza, L. Nicolas, M. Romanyshyn, A. Rosen, A. Rozovskaya, K. Suluste, O. Syvokon, A. Tantos, D. Touriki, K. Tsiotskas, E. Tsourilla, V. Varsamopoulos, K. Wisniewski, A. Žagar, and T. Zesch. _Towards better language representation in Natural Language Processing – a multilingual dataset for text-level Grammatical Error Correction_. To appear in the International Journal of Learner Corpus Research, 2025
+  - \small __dedicated website__: \underline{\url{spraakbanken.github.io/multigec-2025}}
+  - \small __resource page__: \underline{\url{doi.org/10.23695/h9f5-8143}}
+  - \small __download__: \underline{\url{lt3.ugent.be/resources/multigec-dataset}}
