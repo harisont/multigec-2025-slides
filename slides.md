@@ -101,6 +101,18 @@ Grammatical Error Correction is _sequence-to-sequence task_ where:
 
 [^1]: Gemma 2
 
+## System submissions
+
+\footnotesize
+
+| __team__ | __languages__ | __track 1__ | __track 2__ | __system__ |
+| --- | -- | -- | -- | ------- |
+| UAM-CSI | all 12 |  \checkmark | \checkmark | fine-tuned Gemma 2 |
+| Lattice | 11 | \checkmark | | fine-tuned LlaMA 3 | 
+| Lattice | Slovene | \checkmark | | XLM-RoBERTa pipeline  |
+| Rum-Cull | all 12 |  \checkmark | \checkmark | ? | 
+| Grammaticks | Ukrainian | \checkmark | | ? |
+
 ## Results (track 1)
 \bigskip \bigskip
 ![](results_minimal_F05.svg)
