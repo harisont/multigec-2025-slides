@@ -8,11 +8,11 @@ date: "March 5, 2025"
 institute: "R. Muñoz Sánchez, E. Volodina, R. Östling and many, many others"
 ---
 
-## The shared task
-\bigskip
-![](task_web.png)
+## The shared task in short
+![](multigec-2025-horizontal.png)
 
-## The shared task
+\smallskip
+
 - Grammatical Error Correction (GEC)
 - multilingual (12 European languages)
 - text-level
