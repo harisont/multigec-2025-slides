@@ -139,25 +139,26 @@ Grammatical Error Correction is _sequence-to-sequence task_ where:
 - the overall winner is team UAM-CSI <!--across tracks, languages and evaluation metrics-->
 - in track 1, team Lattice ranks second for most languages
 - the baseline was harder to beat than expected
-- some languages (Icelandic & Russian) proved extra challenging for all models \pause
-- 4 submissions (vs ~50 requests for access to the dataset)
+- some languages (Icelandic & Russian) proved extra challenging for all models
 
 ## Reflections
-- __timeline__: to increase participation, the development phase should be longer, while the test phase can be shorter
-- __evaluation__: biggest challenge, need to consider tradeoff between advanced metrics and practicalities of the evaluation platform
-- __baseline__: using LLM-based systems as a baseline may discourage supervised system submissions 
-- __data access__: 
-  - different licenses hinder straightforward data releases of datasets derived from multiple sources
-  - unclear whether to release test sets or keep them private
+__4__ submissions vs. (~__40 + 10__) requests for access to the dataset. How to favor broader participation?
+
+- __timeline__: longer development phase, shorter test phase
+- __baseline__: LLM baselines may discourage submissions of supervised system 
+- __dataset__: 
+  - number of languages/subcorpora vs. ease of access 
+  - test sets: to release or not to release?
+- __evaluation__: advanced metrics vs. practical constraints
 
 ## The future
 - __dataset__:
-  - second release enhanced cross-subcorpus standardization
+  - v1.1 enhancing cross-subcorpus consistency
   - extension of MultiGEC with additional references and/or new languages
 - __evaluation__:
-  - larger-scale manual assessment of the shared task results
+  - larger-scale manual assessment of shared task submissions
   - further work on automatic metrics
-- __open phase__ of the task (ongoing) -- more GEC systems for under-resource languages! 
+- __new MultiGEC systems__ during the task's open phase 
 
 ## To learn more about\...
 
