@@ -142,13 +142,13 @@ Grammatical Error Correction is _sequence-to-sequence task_ where:
 - some languages (Icelandic & Russian) proved extra challenging for all models
 
 ## Reflections
-__4__ submissions vs. (~__40 + 10__) requests for access to the dataset. How to favor broader participation?
+__4__ submissions vs. (~__40 + 10__) requests for access to the dataset. How to favor broader participation? \pause
 
-- __timeline__: longer development phase, shorter test phase
-- __baseline__: LLM baselines may discourage submissions of supervised system 
+- __timeline__: longer development phase, shorter test phase \pause
+- __baseline__: LLM baselines may discourage submissions of supervised system \pause
 - __dataset__: 
   - number of languages/subcorpora vs. ease of access 
-  - test sets: to release or not to release?
+  - test sets: to release or not to release? \pause
 - __evaluation__: advanced metrics vs. practical constraints
 
 ## The future
@@ -157,8 +157,9 @@ __4__ submissions vs. (~__40 + 10__) requests for access to the dataset. How to 
   - extension of MultiGEC with additional references and/or new languages
 - __evaluation__:
   - larger-scale manual assessment of shared task submissions
-  - further work on automatic metrics
-- __new MultiGEC systems__ during the task's open phase 
+  - further work on cross-lingually applicable metrics 
+  - further automation
+- __new MultiGEC systems__ during the task's open phase
 
 ## To learn more about\...
 
