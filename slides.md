@@ -174,3 +174,6 @@ __4__ submissions vs. (~__40 + 10__) requests for access to the dataset. How to 
   - \small __dedicated website__: \underline{\url{spraakbanken.github.io/multigec-2025}}
   - \small __resource page__: \underline{\url{doi.org/10.23695/h9f5-8143}}
   - \small __download__: \underline{\url{lt3.ugent.be/resources/multigec-dataset}}
+
+## Thanks to
+![](thanks.png)
